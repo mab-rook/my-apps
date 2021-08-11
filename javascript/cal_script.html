@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+  }
+
+  .container{
+      display: flex;
+      flex-direction: column;
+    }
+
+ /* button {
+      border: 1 solid black;
+     /* background: rgba(242, 243, 245, 0.28); */
+      color: blue;
+      cursor: pointer;
+      float: left;
+      font: inherit;
+      margin: 0.25em;
+      width: 2em;
+      height: 2em;
+      transition: all 0.5s;
+      
+  }*/
+
+</style>
+<body>
+  <div class="container">
+      <div class="header">Javascript Calculator</div>
+      <input type="number" id="text1" value="number A"><br>
+      <input type="number" name="" id="text2" value="number B"><br>
+      <div id="">result: <span id="text3" value="result" >0</span></div>
+      <button onclick="addition()">Add</button>
+      <button onclick="minus()">Sub</button>
+      <button onclick="multiply()">Mul</button>
+      <button onclick="division()">Div</button>
+      <div>
+        <input type="reset" id="reset" onclick="erase()">
+      </div>
+
+  </div>
+
+
+
+
+
+</body>
+<script>
+   function addition(){
+     var a,b, result;
+     a = parseInt(document.getElementById('text1').value);
+     b = parseInt(document.getElementById('text2').value);
+     result = (a + b);
+
+     document.getElementById('text3').innerText = result;
+    
+   }
+   function minus(){
+     var a,b, result;
+     a = parseInt(document.getElementById('text1').value);
+     b = parseInt(document.getElementById('text2').value);
+     result = (a - b);
+
+     document.getElementById('text3').innerText = result;
+    
+   }
+   function multiply(){
+     var a,b, result;
+     a = parseInt(document.getElementById('text1').value);
+     b = parseInt(document.getElementById('text2').value);
+     result = (a * b);
+
+     document.getElementById('text3').innerText = result;
+    
+   }
+   function division(){
+     var a,b, result;
+     a = parseInt(document.getElementById('text1').value);
+     b = parseInt(document.getElementById('text2').value);
+     result = (a / b);
+
+     document.getElementById('text3').innerText = result;
+    
+   }
+   
+  function erase() {     
+    var reset = document.getElementById("reset");
+    let Rest = reset.value;
+    //document.getElementById('text1').innerText = Rest;
+    //document.getElementById('text2').innerText = Rest;
+    document.getElementById('text3').innerHTML = Rest;
+    console.log(Rest);
+
+   }
+
+</script>
+</html>

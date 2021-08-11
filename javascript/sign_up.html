@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGN UP</title>
+</head>
+<style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+</style>
+<body>
+  <div class="container">
+    <div class="header">Sign Up</div>
+    <input type="text" name="" id="fullname" placeholder="Fullname" required>
+    <input type="text" name="" id="username" placeholder="username" required>
+    <input type="password" name="" id="password" placeholder="password" pattern=".{5,10}" required title="enter btw 5 to 10 characters" >
+    <input type="password" name="" id="confirm" placeholder="confirm" pattern=".{5,10}" required title="enter btw 5 to 10 characters">
+    <input type="email" name="" id="email" placeholder="email" required >
+    <input type="tel" name="" id="phonenumber" placeholder="phonenumber" required>
+    <input type="number" name="" id="age" placeholder="age" pattern=".{18,100}"required >
+    <input type="text" name="" id="gender" placeholder="gender" required>
+    <button type="btn" id="login">Sign up</button>
+  </div>
+
+
+</body>
+<script>
+  let pass = document.getElementById('password');
+  let con_pass = document.getElementById('confirm');
+  let age_exact = document.getSelection('.{18,100}');
+  let btn = document.getElementById('login');
+  let confirm_password = "confirm";
+
+
+
+ 
+  btn.addEventListener("click", checkSignUp);
+
+  function checkSignUp(){
+    let password = pass.value;
+    let confirm = con_pass.value;
+    let age = age_exact.value;
+
+
+    if (confirm == confirm_password){
+      alert('successful');
+    }else{
+      alert('try again');
+    }
+
+  }
+
+</script>
+</html>

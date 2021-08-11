@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Guessing</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-image: url("image.jpg");
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+</style>
+<body>
+  <div class="container">
+    <h1>Word guesser</h1>
+    <div class="input">
+      <input type="text" id="guessedword" placeholder="Word">
+      <button type="button" id="check">check</button>
+    </div>
+  </div>
+  
+  
+</body>
+<script>
+  let user = document.getElementById('guessedword');
+  let btn = document.getElementById('check');
+
+  let secret_word  = "book";
+
+  btn.addEventListener('click', word);
+
+  function word(){
+    let  check_word = user.value;
+
+    if(check_word === secret_word){
+      alert('great!');
+    }else{
+      alert('wrong!');
+    }
+   
+    
+
+  }
+
+
+
+</script>
+</html>
