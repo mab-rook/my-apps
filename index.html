@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign up</title>
+</head>
+<body>
+  
+  <div class="container">
+    <h1><img width="8%" src="comp.png" alt=""> COMPUTER SCIENCE AND TECHNOLOGY</h1>
+    <nav>
+      <a href="">Home</a>|
+      <a href="">Admission</a>|
+      <a href="">About</a>
+    </nav>
+
+    <div>
+      <h1 class="sur">Surname:</h1>
+      <h1 class="oth">Othername:</h1>
+      <h1 class="ema">Email:</h1>
+    </div>
+
+  </div>
+
+  
+
+
+<script>
+  let full_name = document.querySelector(".sur");
+  let other = document.querySelector(".oth");
+  let mail = document.querySelector(".ema");
+  let user_info = JSON.parse(sessionStorage.getItem("user_info"));
+  console.log(user_info);
+  full_name.textContent += user_info.full_name;
+  other.textContent += user_info.other;
+  mail.textContent += user_info.mail;
+
+
+</script>
+</body>
+</html>
